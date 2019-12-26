@@ -6,8 +6,6 @@ import like from  '../images/like-default.png'
 
 function PostItem(props) {
   
-
-
   const handleClick = () => {
     props.onVote(props.post.id)
   }
