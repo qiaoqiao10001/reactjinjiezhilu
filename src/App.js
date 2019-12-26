@@ -4,6 +4,7 @@ import Modal from './components/Modal'
 // import FormInput from './components/FormInput'
 // import FormSelect from './components/FormSelect'
 // import FormRadio from './components/FormRadio'
+import UserContainer from './UserContainer'
 
 class App extends React.Component {
   constructor(props){
@@ -19,6 +20,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <PostList></PostList>
+        <UserContainer></UserContainer>
         {this.state.showModal && (
           <Modal onClose={this.closeModal}>modaldialog</Modal>
         )}
