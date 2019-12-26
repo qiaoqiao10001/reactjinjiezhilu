@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types'
-
+import '../style/postItem.css'
+import like from  '../images/like-default.png'
+// import '../images/like-default.png'
 
 function PostItem(props) {
   
@@ -12,11 +14,11 @@ function PostItem(props) {
 
   const { post } = props
   return (
-    <li>
-      <div>{post.title}</div>
+    <li className='item'>
+      <div className='title'>{post.title}</div>
       <div>创建人：<span>{post.author}</span></div>
       <div>创建时间：<span>{post.date}</span></div>
-      <div><button onClick={handleClick}>点赞</button>{post.vote}</div>
+      <div className='like'> <img onClick={handleClick} src={like} alt='点赞'/> {post.vote}</div>
     </li>
   );
 
