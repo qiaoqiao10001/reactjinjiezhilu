@@ -1,6 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types'
+
 
 function PostItem(props) {
+  
+
 
   const handleClick = () => {
     props.onVote(props.post.id)
@@ -16,6 +20,17 @@ function PostItem(props) {
     </li>
   );
 
+}
+
+PostItem.propTypes = {
+  post: PropTypes.shape({
+    id: PropTypes.number,
+    title: PropTypes.string,
+    author: PropTypes.string,
+    date: PropTypes.string,
+    vote: PropTypes.number
+  }).isRequired,
+  onVote: PropTypes.func.isRequired
 }
 
 export default PostItem;
